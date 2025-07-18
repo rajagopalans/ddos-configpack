@@ -1,6 +1,6 @@
 ---
 manifest_version: 1
-description: Set ECMP hashing criteria to include port data in the flow determination.
+description: Track how often traffic has exceeded the thresholds defined by DDoS protection policers
 supported_apstra_versions:
   - 5.0.0
   - 5.0.1
