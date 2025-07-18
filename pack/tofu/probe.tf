@@ -1,4 +1,7 @@
 resource "apstra_raw_json" "ddos_probe" {
+  depends_on = [
+ 	apstra_raw_json.ddos_collector 
+ ]
   url = format("/api/blueprints/%s/probes",var.blueprint_id)
   payload   = <<-EOT
   {
@@ -113,6 +116,7 @@ resource "apstra_raw_json" "ddos_probe" {
     "retention_duration": 86400,
     "retention_size": 0,
     "graph_annotation_properties": {}
+    }
   ]
 }
 EOT

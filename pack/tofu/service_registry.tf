@@ -1,5 +1,6 @@
-resource "apstra_raw_json" "service_registry" {
+resource "apstra_raw_json" "ddos_service" {
   url = "/api/telemetry-service-registry"
+  id = "DDoS_Protection_Protocols"
   payload = jsonencode(
     {
       description        = "DDOS service registry"

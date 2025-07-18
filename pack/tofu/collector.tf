@@ -1,5 +1,9 @@
-resource "apstra_raw_json" "collector" {
+resource "apstra_raw_json" "ddos_collector" {
+  depends_on = [
+    apstra_raw_json.ddos_service
+  ]
   url = "/api/telemetry/collectors"
+  id = "DDoS_Protection_Protocols"
   payload = jsonencode({
     service_name = "DDoS_Protection_Protocols",
     collectors = [
