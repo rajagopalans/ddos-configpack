@@ -9,6 +9,3 @@ terraform {
     }
   }
 }
-provider "apstra" {
-  blueprint_mutex_enabled = true
-  }
